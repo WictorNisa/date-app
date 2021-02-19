@@ -109,12 +109,21 @@ main{
 .quote-holder{
     text-align: left;
     line-height: 1.5em;
+    height: 200px;
+    overflow: scroll;
 }
 
-.quote-text{
+#quote-h6{
     color: white;
     letter-spacing: .1em;
-    font-size: .7em;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+#quote-p{
+    color: white;
+    letter-spacing: .1em;
+    font-size: 1em; 
 }
 
 .refresh-button{
@@ -128,7 +137,7 @@ main{
 .information-wrapper{
     width: 90%;
     height: 25vh;
-    margin: auto;
+    margin: 5em auto;
     align-self: center;
 }
 

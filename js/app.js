@@ -1,5 +1,8 @@
 console.log("Hello World");
 const timeContainer = document.getElementById("clock-div");
+const quoteContainer = document.getElementById('quote-div');
+const quoteh6 = document.getElementById('quote-h6');
+const quotep = document.getElementById('quote-p');
 
 function loadTime() {
   const loadPromise = fetch("http://worldtimeapi.org/api/ip");
@@ -8,7 +11,6 @@ function loadTime() {
     convertResponse.then((timezone) => {
       let localTime = timezone.datetime;
       const date = new Date(localTime);
-      console.log(date);
       let hours = date.getHours();
       let minutes = date.getMinutes();
 
@@ -28,3 +30,20 @@ function loadTime() {
 }
 
 loadTime();
+
+
+function loadQuote() {
+    const loadPromise = fetch('https://stoic-server.herokuapp.com/random');
+    loadPromise.then(response => {
+        const convertResponse = response.json();
+        convertResponse.then((quote) => {
+            const baseQuote = quote[0];
+            let quoteBody = `${baseQuote.body}`;
+            let quoteAuthor = `${baseQuote.author}`;
+            quoteh6.innerText = quoteBody;
+            quotep.innerText = quoteAuthor;
+        })
+    })
+}
+
+loadQuote();
