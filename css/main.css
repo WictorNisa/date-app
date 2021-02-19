@@ -1,0 +1,200 @@
+/* /===================================CSS Reset===================================/ */
+/* <span>Photo by <a href="https://unsplash.com/@inesgoe?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ines Göhringer</a> on <a href="https://unsplash.com/t/nature?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
+/* Box sizing rules */
+/* <span>Photo by <a href="https://unsplash.com/@kimimesco?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Michele Mescolin</a> on <a href="https://unsplash.com/s/photos/hd-summer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+h1{
+    font-weight: bold;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url('../img/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.overlay{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(148, 158, 155, .2);
+    z-index: 3;
+}
+
+.quote-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+
+.quote-holder{
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.quote-text{
+    color: white;
+    letter-spacing: .1em;
+    font-size: .7em;
+}
+
+.refresh-button{
+    margin-top: 1em;
+}
+
+
+
+/* =============================================== INFORMATION STYLES ========================================== */
+
+.information-wrapper{
+    width: 90%;
+    height: 25vh;
+    margin: auto;
+    align-self: center;
+}
+
+.greeting-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.greeting-text{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: lighter;
+    margin-left: 1em;
+    font-size: 1em;
+}
+
+
+.clock-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 5em;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.clock-wrap p {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 20px;
+    align-self: flex-end;
+    margin: auto;
+}
+
+.clock-text{
+    font-size: 5em;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.location-text{
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/* =============================================== MODAL STYLES ========================================== */
+
+.show-modal{
+    background-color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 150px;
+    border-radius: 50px;
+}
