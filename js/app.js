@@ -3,6 +3,7 @@ const timeContainer = document.getElementById("clock-div");
 const quoteContainer = document.getElementById('quote-div');
 const quoteh6 = document.getElementById('quote-h6');
 const quotep = document.getElementById('quote-p');
+const locationText = document.getElementById('locationText');
 
 function loadTime() {
   const loadPromise = fetch("http://worldtimeapi.org/api/ip");
@@ -17,7 +18,7 @@ function loadTime() {
       function addZero(component) {
         return component < 10 ? "0" + component : component;
       }
-      hours = hours === 0 ? 12 : hours > 12 ? hours - 12 : hours;
+      hours = hours === 0 ? 12 : hours > 24 ? hours - 24 : hours;
       hours = addZero(hours);
       minutes = addZero(minutes);
 
@@ -47,3 +48,16 @@ function loadQuote() {
 }
 
 loadQuote();
+
+
+function loadLocation() {
+    const loadPromise = fetch('https://freegeoip.app/json/');
+    loadPromise.then(response => {
+        const convertResponse = response.json();
+        convertResponse.then((location) =>{
+            let locationBody = `${location.country_name}, ${location.country_code}`;
+            locationText.innerText = locationBody;
+        });
+    });
+}
+loadLocation();
