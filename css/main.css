@@ -70,140 +70,205 @@ select {
   font: inherit;
 }
 
-body{
-    font-family: 'Inter', sans-serif;
+body {
+  font-family: "Inter", sans-serif;
 }
 
-h1{
-    font-weight: bold;
+h1 {
+  font-weight: bold;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    background-image: url('../img/hero.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url("../img/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 135vh;
+  width: 100%;
 }
 
-.overlay{
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(148, 158, 155, .2);
-    z-index: 3;
+.overlay {
+  height: 135vh;
+  width: 100%;
+  background-color: rgba(148, 158, 155, 0.2);
+  z-index: 3;
 }
 
-.quote-wrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 90%;
-    margin: auto;
+.quote-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
 }
 
-.quote-holder{
-    text-align: left;
-    line-height: 1.5em;
-    height: 200px;
-    overflow: scroll;
+.quote-holder {
+  text-align: left;
+  line-height: 1.5em;
+  height: 200px;
+  overflow: scroll;
 }
 
-#quote-h6{
-    color: white;
-    letter-spacing: .1em;
-    font-size: 1em;
-    font-weight: normal;
+#quote-h6 {
+  color: white;
+  letter-spacing: 0.1em;
+  font-size: 1em;
+  font-weight: normal;
 }
 
-#quote-p{
-    color: white;
-    letter-spacing: .1em;
-    font-size: 1em; 
+#quote-p {
+  color: white;
+  letter-spacing: 0.1em;
+  font-size: 1em;
 }
 
-.refresh-button{
-    margin-top: 1em;
+.refresh-button {
+  margin-top: 1em;
 }
-
-
 
 /* =============================================== INFORMATION STYLES ========================================== */
 
-.information-wrapper{
-    width: 90%;
-    height: 25vh;
-    margin: 5em auto;
-    align-self: center;
+.information-wrapper {
+  width: 90%;
+  height: 25vh;
+  margin: 5em auto;
+  align-self: center;
+  z-index: 5;
 }
 
-.greeting-wrap{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+.greeting-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
-.greeting-text{
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    font-weight: lighter;
-    margin-left: 1em;
-    font-size: 1em;
+.greeting-text {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+  margin-left: 1em;
+  font-size: 1em;
 }
 
-
-.clock-wrap{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 5em;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
+.clock-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 5em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
 }
 
-.clock-wrap p {
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    height: 20px;
-    align-self: flex-end;
-    margin: auto;
-}
-
-.clock-text{
-    font-size: 5em;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-
-.location-text{
-    font-size: 1.2em;
-    letter-spacing: .1em;
-    color: white;
-    text-transform: uppercase;
-    font-weight: normal;
+.location-text {
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 /* =============================================== MODAL STYLES ========================================== */
 
-.show-modal{
-    background-color:white;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 150px;
-    border-radius: 50px;
+.show-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 150px;
+  border-radius: 50px;
+  margin-bottom: 3em;
+  margin-left: 1em;
 }
+
+.show-modal p {
+  text-align: center;
+  margin: auto;
+}
+
+#button{
+  transform: scale(.85);
+}
+
+.modal {
+  background-color: rgba(240, 245, 244, 0.7);
+  backdrop-filter: blur(10px);
+  height: 50vh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.showdatedetails-p {
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  color: black;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.show-current-date-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+}
+
+
+.fade-in-bck {
+	-webkit-animation: fade-in-bck 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bck 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-2-27 18:21:5
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in-bck
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-in-bck {
+  0% {
+    -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bck {
+  0% {
+    -webkit-transform: translateZ(80px);
+            transform: translateZ(80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
