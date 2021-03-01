@@ -1,4 +1,3 @@
-console.log("Hello World");
 const timeContainer = document.getElementById("clock-div");
 const quoteContainer = document.getElementById('quote-div');
 const quoteh6 = document.getElementById('quote-h6');
@@ -10,6 +9,7 @@ const dayOfWeek = document.getElementById('dayofweek-p');
 const currentWeekNumber = document.getElementById('weeknumber-p');
 const buttonDiv = document.getElementById('modal-show');
 const button = document.getElementById('button');
+const modal = document.getElementById('modal-flip');
 
 
 
@@ -69,7 +69,7 @@ function loadQuote() {
         convertResponse.then((quote) => {
             const baseQuote = quote[0];
             let quoteBody = `${baseQuote.body}`;
-            let quoteAuthor = `${baseQuote.author}`;
+            let quoteAuthor = `- ${baseQuote.author}`;
             quoteh6.innerText = quoteBody;
             quotep.innerText = quoteAuthor;
         })
@@ -93,17 +93,17 @@ function loadLocation() {
 }
 loadLocation();
 
-
+const moreLessText = document.getElementById('more-less-p');
+moreLessText.defaultValue = 'More';
 button.addEventListener("click", () => {
-  const moreLessText = document.getElementById('more-less-p');
-  const modal = document.getElementById('modal-flip');
+
+  
     if(modal.style.display === 'none'){
       modal.style.display = 'flex';
-      moreLessText.innerText = 'More';
+      moreLessText.innerText = 'Less';
     } else{
       modal.style.display = 'none';
       moreLessText.innerText = 'More';
-
     }
 });
 

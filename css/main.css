@@ -229,6 +229,15 @@ main {
   margin: auto;
 }
 
+#weather-p {
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-top: .5em;
+}
+
 
 .fade-in-bck {
 	-webkit-animation: fade-in-bck 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
